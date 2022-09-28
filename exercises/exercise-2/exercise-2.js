@@ -70,3 +70,27 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+
+function gryffindorMembers(array) {
+  return array
+          .filter(({house}) => house === "Gryffindor")
+          .forEach(({firstName, lastName}) => console.log(`${firstName} ${lastName}`));
+}
+
+gryffindorMembers(hogwarts);
+// Harry Potter
+// Ron Weasley
+// Hermione Granger
+// Minerva McGonagall
+// Albus Dumbledore
+
+
+function teachersWithPets(array) {
+  return array
+            .filter(({occupation, pet}) => occupation === "Teacher" && pet)
+            .forEach(({firstName, lastName}) => console.log(`${firstName} ${lastName}`));
+}
+
+teachersWithPets(hogwarts);
+// Albus Dumbledore
